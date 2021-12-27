@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World For Study</title>
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'study/testHeader.css'  %}" > -->
+    <link rel="stylesheet" href="{% static 'study/newst1.css'  %}" >
+    <link rel="stylesheet" href="{% static 'study/newst2.css'  %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/popper.js"></script>
+</head>
+<body>
+<!--
+<header class="switcher-bar ssss clearfix">
+
+<div class="logo textual pull-left">
+<a href="#" title="Switcher">
+<img src="assets/img/xlogo.png.pagespeed.ic.ICv6ugye0D.png" alt="Colorlib logo">
+</a>
+</div>
+
+<div class="product-switcher pull-left">
+<a href="#" title="Select a Product">
+Select a Product <span>+</span>
+</a>
+</div>
+
+<div class="remove-btn header-btn pull-right">
+<a href="#" title="Close this bar" class="icon-remove"></a>
+</div>
+
+<div class="purchase-btn header-btn pull-right">
+<a href="#" title="Buy now" class="icon-shopping-cart"></a>
+</div>
+
+<div class="mobile-btn header-btn pull-right hidden-xs">
+<a href="#" title="Smartphone View" class="icon-mobile-phone"></a>
+</div>
+
+<div class="tablet-btn header-btn pull-right hidden-xs">
+<a href="#" title="Tablet View" class="icon-tablet"></a>
+</div>
+
+<div class="desktop-btn header-btn pull-right hidden-xs">
+<a href="#" title="Desktop View" class="icon-desktop"></a>
+</div>
+</header>
+
+<section class="switcher-body">
+<a href="#" title="Prev" class="icon-chevron-left products-prev"></a>
+<div class="products-wrapper">
+<div class="products-list clearfix">
+</div>
+</div>
+<a href="#" title="Next" class="icon-chevron-right products-next"></a>
+</section>
+-->
+    <div class="super_container">
+
+<header class="header d-flex flex-row">
+<div class="header_content d-flex flex-row align-items-center">
+
+<div class="logo_container">
+<div class="logo">
+<!--<script data-pagespeed-no-defer>//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}
+var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;
+function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}
+function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),
+b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});
+function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=
+new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}
+function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});
+u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();
+
+pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://preview.colorlib.com/theme/course/','-ilGEe-FWC',true,false,'cZVVwhGE2z8');
+//]]></script><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAArCAYAAADVJLDcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA8BJREFUeNrUmWlIFVEYhs9cl6KMQqQUCpMWKtACIyGioB+ZgZXSgu0uYRARZLRJWCb1L4KCyLwWSWVShGC2148MNKIwoWyBJEMlLDMqt7v0HvqMYXLOzNyZccYPnrvMduedc873vedcKSmlkGnEdnBe66DG+hLmdHg09seC02AyGwGhJWYbGAVyR7oYCWTTZy4mzO1iwgX7FoGZ9HkKSAM1wqudlfT+7jywHiwEqaDXjAifn7HvPZKwZfIU3/NNPrhEUAzegpfgAFgMCu1umfFgjWJbGrVQq4Hrz6IWWAfmqByzH1SBJrvGTBYYo9jGx0yOjmvOoKf9CrwBRwRCeESAMnq3RUyuYLsoEfCn/A6UULfSGwvAMTvEJIH5KsfzbuYDQQUnaP8EE/eyD6yyWkyeQ5mVp8IKgy0qFDMabHSwVIwDtSDeCjEZINrh2set0wMQZ1ZMDnNHTAdPwNRQxSSApS5yJ9NI0NxQxGTrMJ5OdLmnVHR1i/HITKXbYiyoBKcoQWmKWT6Mc5Zf4A7VlQKqU3rS9m7wTFAD/3kzOwd+P6gHj8BD0AAGZPujDZjNRDq/FBwCXUoxE0G6hTcPQ85e0M1z6sBvwfGHybtlGBjnO8gIc0EXBx8O37EZRFokhK8VxJDX4hb/noYQRt1sE16aAngxQAwoBR9w/h7eKOFdne+L/IGBoBkFkZFRKfz9U5fUoePmh4o+SWLtwWBIViY2IowtiYoMNnt8vt6jwYBfMkNfb3eDrMu0AC9/2gaq+HEIWWZ0ggnOUGHlBrXWQ+au38IxE08JhV+3DbymH81UsUpbKLMZCV5Mk8Eu0C5PAF9obp9pUzabTewEAZoyP6bM5mM61uRk0UnpvGKolD6Ymr02ilFmomRir8FzufncSq0tLJp3wWeXOoAgLYSkioTIxfgpX7steGZcC4qoi+o2muV6ThjG6KbWuBGKa/5IA9MN8Y2mI3VmJmdel3StFWSJTM00b9JTcSr8NHdpsGINgK/5XnZQDC+et6xcanKqq10DJ80WMWU0gucqx7dSoZUUHKT9xVR8K2kSpjd48jG7MK865y9X2e6lfq0WPTTusmiexBfNr9N2UVHMp1Rsi5grQ1h5v0CkWlaqoqLHhW0A1ez//2IugftWeSW1gqUsVreZsb8z5PETXAWrwSRyyjVkcgusNH5qUab4fs6i3/xBrjedFlG+WiVGiotfKVoRaWZ//wrkLZIgGi9tLdWOV1uPxsC8IEsIfuby0FrB5E66zyU2x7SYDpqato4EMX8EGAB+jh+v50OCdQAAAABJRU5ErkJggg==" alt="" data-pagespeed-url-hash="2715174268" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+-->
+<span>course</span>
+</div>
+</div>
+
+<nav class="main_nav_container">
+<div class="main_nav">
+<ul class="main_nav_list">
+<li class="main_nav_item"><a href="#">home</a></li>
+<li class="main_nav_item"><a href="#">about us</a></li>
+<li class="main_nav_item"><a href="courses.html">courses</a></li>
+<li class="main_nav_item"><a href="elements.html">elements</a></li>
+<li class="main_nav_item"><a href="news.html">news</a></li>
+<li class="main_nav_item"><a href="contact.html">contact</a></li>
+</ul>
+</div>
+</nav>
+</div>
+<div class="header_side d-flex flex-row justify-content-center align-items-center">
+<img src="images/phone-call.svg" alt="" data-pagespeed-url-hash="2792816113" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<span>+43 4566 7788 2457</span>
+</div>
+
+<div class="hamburger_container">
+<i class="fas fa-bars trans_200"></i>
+</div>
+</header>
+
+<div class="menu_container menu_mm">
+
+<div class="menu_close_container">
+<div class="menu_close"></div>
+</div>
+
+<div class="menu_inner menu_mm">
+<div class="menu menu_mm">
+<ul class="menu_list menu_mm">
+<li class="menu_item menu_mm"><a href="#">Home</a></li>
+<li class="menu_item menu_mm"><a href="#">About us</a></li>
+<li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
+<li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
+<li class="menu_item menu_mm"><a href="news.html">News</a></li>
+<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+</ul>
+
+<div class="menu_social_container menu_mm">
+<ul class="menu_social menu_mm">
+<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+</ul>
+</div>
+<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
+</div>
+</div>
+</div>
+
+<div class="home">
+
+<div class="hero_slider_container">
+<div class="hero_slider owl-carousel">
+
+<div class="hero_slide">
+<div class="hero_slide_background" style="background-image:url(images/xslider_background.jpg.pagespeed.ic.yhc679oD7m.jpg)"></div>
+<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+<div class="hero_slide_content text-center">
+<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
+</div>
+</div>
+</div>
+
+<div class="hero_slide">
+<div class="hero_slide_background" style="background-image:url(images/xslider_background.jpg.pagespeed.ic.yhc679oD7m.jpg)"></div>
+<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+<div class="hero_slide_content text-center">
+<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
+</div>
+</div>
+</div>
+
+<div class="hero_slide">
+<div class="hero_slide_background" style="background-image:url(images/xslider_background.jpg.pagespeed.ic.yhc679oD7m.jpg)"></div>
+<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+<div class="hero_slide_content text-center">
+<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
+<div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div>
+</div>
+</div>
+<div class="hero_boxes">
+<div class="hero_boxes_inner">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 hero_box_col">
+<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+<img src="images/earth-globe.svg" class="svg" alt="" data-pagespeed-url-hash="1331675182" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="hero_box_content">
+<h2 class="hero_box_title">Online Courses</h2>
+<a href="courses.html" class="hero_box_link">view more</a>
+</div>
+</div>
+</div>
+<div class="col-lg-4 hero_box_col">
+<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+<img src="images/books.svg" class="svg" alt="" data-pagespeed-url-hash="1071120454" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="hero_box_content">
+<h2 class="hero_box_title">Our Library</h2>
+<a href="courses.html" class="hero_box_link">view more</a>
+</div>
+</div>
+</div>
+<div class="col-lg-4 hero_box_col">
+<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+<img src="images/professor.svg" class="svg" alt="" data-pagespeed-url-hash="2289785859" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="hero_box_content">
+<h2 class="hero_box_title">Our Teachers</h2>
+<a href="teachers.html" class="hero_box_link">view more</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="popular page_section">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="section_title text-center">
+<h1>Popular Courses</h1>
+</div>
+</div>
+</div>
+<div class="row course_boxes">
+
+<div class="col-lg-4 course_box">
+<div class="card">
+<img class="card-img-top" src="images/xcourse_1.jpg.pagespeed.ic.NVGjctc011.jpg" alt="https://unsplash.com/@kellybrito" data-pagespeed-url-hash="1472373842" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="card-body text-center">
+<div class="card-title"><a href="courses.html">A complete guide to design</a></div>
+<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+</div>
+<div class="price_box d-flex flex-row align-items-center">
+<div class="course_author_image">
+<img src="images/xauthor.jpg.pagespeed.ic.IxXl6GqAUJ.jpg" alt="https://unsplash.com/@mehdizadeh" data-pagespeed-url-hash="1464813160" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="course_author_name">Michael Smith, <span>Author</span></div>
+<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 course_box">
+<div class="card">
+<img class="card-img-top" src="images/xcourse_2.jpg.pagespeed.ic.co2OC-YenT.jpg" alt="https://unsplash.com/@cikstefan" data-pagespeed-url-hash="1766873763" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="card-body text-center">
+<div class="card-title"><a href="courses.html">Beginners guide to HTML</a></div>
+<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+</div>
+<div class="price_box d-flex flex-row align-items-center">
+<div class="course_author_image">
+<img src="images/xauthor.jpg.pagespeed.ic.IxXl6GqAUJ.jpg" alt="https://unsplash.com/@mehdizadeh" data-pagespeed-url-hash="1464813160" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="course_author_name">Michael Smith, <span>Author</span></div>
+<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 course_box">
+<div class="card">
+<img class="card-img-top" src="images/course_3.jpg" alt="https://unsplash.com/@dsmacinnes" data-pagespeed-url-hash="2061373684" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="card-body text-center">
+<div class="card-title"><a href="courses.html">Advanced Photoshop</a></div>
+<div class="card-text">Adobe Guide, Layes, Smart Objects etc...</div>
+</div>
+<div class="price_box d-flex flex-row align-items-center">
+<div class="course_author_image">
+<img src="images/xauthor.jpg.pagespeed.ic.IxXl6GqAUJ.jpg" alt="https://unsplash.com/@mehdizadeh" data-pagespeed-url-hash="1464813160" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="course_author_name">Michael Smith, <span>Author</span></div>
+<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$29</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="register">
+<div class="container-fluid">
+<div class="row row-eq-height">
+<div class="col-lg-6 nopadding">
+
+<div class="register_section d-flex flex-column align-items-center justify-content-center">
+<div class="register_content text-center">
+<h1 class="register_title">Register now and get a discount <span>50%</span> discount until 1 January</h1>
+<p class="register_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempo.</p>
+<div class="button button_1 register_button mx-auto trans_200"><a href="#">register now</a></div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 nopadding">
+
+<div class="search_section d-flex flex-column align-items-center justify-content-center">
+<div class="search_background" style="background-image:url(images/xsearch_background.jpg.pagespeed.ic.25dHkX5s24.jpg)"></div>
+<div class="search_content text-center">
+<h1 class="search_title">Search for your course</h1>
+<form id="search_form" class="search_form" action="post">
+<input id="search_form_name" class="input_field search_form_name" type="text" placeholder="Course Name" required data-error="Course name is required.">
+<input id="search_form_category" class="input_field search_form_category" type="text" placeholder="Category">
+<input id="search_form_degree" class="input_field search_form_degree" type="text" placeholder="Degree">
+<button id="search_submit_button" type="submit" class="search_submit_button trans_200" value="Submit">search course</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="services page_section">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="section_title text-center">
+<h1>Our Services</h1>
+</div>
+</div>
+</div>
+<div class="row services_row">
+<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+<div class="icon_container d-flex flex-column justify-content-end">
+<img src="images/earth-globe.svg" alt="" data-pagespeed-url-hash="1331675182" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<h3>Online Courses</h3>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+</div>
+<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+<div class="icon_container d-flex flex-column justify-content-end">
+<img src="images/exam.svg" alt="" data-pagespeed-url-hash="2954959791" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<h3>Indoor Courses</h3>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+</div>
+<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+<div class="icon_container d-flex flex-column justify-content-end">
+<img src="images/books.svg" alt="" data-pagespeed-url-hash="1071120454" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<h3>Amazing Library</h3>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+</div>
+<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+<div class="icon_container d-flex flex-column justify-content-end">
+<img src="images/professor.svg" alt="" data-pagespeed-url-hash="2289785859" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<h3>Exceptional Professors</h3>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+</div>
+<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+<div class="icon_container d-flex flex-column justify-content-end">
+<img src="images/blackboard.svg" alt="" data-pagespeed-url-hash="2374786947" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<h3>Top Programs</h3>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+</div>
+<div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+<div class="icon_container d-flex flex-column justify-content-end">
+<img src="images/mortarboard.svg" alt="" data-pagespeed-url-hash="4137208717" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<h3>Graduate Diploma</h3>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="testimonials page_section">
+
+<div class="testimonials_background_container prlx_parent">
+<div class="testimonials_background prlx" style="background-image:url(images/xtestimonials_background.jpg.pagespeed.ic.li4NTeAx_M.jpg)"></div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="section_title text-center">
+<h1>What our students say</h1>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-10 offset-lg-1">
+<div class="testimonials_slider_container">
+
+<div class="owl-carousel owl-theme testimonials_slider">
+
+<div class="owl-item">
+<div class="testimonials_item text-center">
+<div class="quote">“</div>
+<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+<div class="testimonial_user">
+<div class="testimonial_image mx-auto">
+<img src="images/xtestimonials_user.jpg.pagespeed.ic.XJYDowRicp.jpg" alt="" data-pagespeed-url-hash="2918457879" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="testimonial_name">james cooper</div>
+<div class="testimonial_title">Graduate Student</div>
+</div>
+</div>
+</div>
+
+<div class="owl-item">
+<div class="testimonials_item text-center">
+<div class="quote">“</div>
+<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+<div class="testimonial_user">
+<div class="testimonial_image mx-auto">
+<img src="images/xtestimonials_user.jpg.pagespeed.ic.XJYDowRicp.jpg" alt="" data-pagespeed-url-hash="2918457879" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="testimonial_name">james cooper</div>
+<div class="testimonial_title">Graduate Student</div>
+</div>
+</div>
+</div>
+
+<div class="owl-item">
+<div class="testimonials_item text-center">
+<div class="quote">“</div>
+<p class="testimonials_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</p>
+<div class="testimonial_user">
+<div class="testimonial_image mx-auto">
+<img src="images/xtestimonials_user.jpg.pagespeed.ic.XJYDowRicp.jpg" alt="" data-pagespeed-url-hash="2918457879" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+<div class="testimonial_name">james cooper</div>
+<div class="testimonial_title">Graduate Student</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="events page_section">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="section_title text-center">
+<h1>Upcoming Events</h1>
+</div>
+</div>
+</div>
+<div class="event_items">
+
+<div class="row event_item">
+<div class="col">
+<div class="row d-flex flex-row align-items-end">
+<div class="col-lg-2 order-lg-1 order-2">
+<div class="event_date d-flex flex-column align-items-center justify-content-center">
+<div class="event_day">07</div>
+<div class="event_month">January</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-2 order-3">
+<div class="event_content">
+<div class="event_name"><a class="trans_200" href="#">Student Festival</a></div>
+<div class="event_location">Grand Central Park</div>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
+</div>
+</div>
+<div class="col-lg-4 order-lg-3 order-1">
+<div class="event_image">
+<img src="images/xevent_1.jpg.pagespeed.ic.qVoOJpCcIg.jpg" alt="https://unsplash.com/@theunsteady5" data-pagespeed-url-hash="2053259825" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row event_item">
+<div class="col">
+<div class="row d-flex flex-row align-items-end">
+<div class="col-lg-2 order-lg-1 order-2">
+<div class="event_date d-flex flex-column align-items-center justify-content-center">
+<div class="event_day">07</div>
+<div class="event_month">January</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-2 order-3">
+<div class="event_content">
+<div class="event_name"><a class="trans_200" href="#">Open day in the Univesrsity campus</a></div>
+<div class="event_location">Grand Central Park</div>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
+</div>
+</div>
+<div class="col-lg-4 order-lg-3 order-1">
+<div class="event_image">
+<img src="images/xevent_2.jpg.pagespeed.ic.-uQOE2X0Em.jpg" alt="https://unsplash.com/@claybanks1989" data-pagespeed-url-hash="2347759746" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row event_item">
+<div class="col">
+<div class="row d-flex flex-row align-items-end">
+<div class="col-lg-2 order-lg-1 order-2">
+<div class="event_date d-flex flex-column align-items-center justify-content-center">
+<div class="event_day">07</div>
+<div class="event_month">January</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-2 order-3">
+<div class="event_content">
+<div class="event_name"><a class="trans_200" href="#">Student Graduation Ceremony</a></div>
+<div class="event_location">Grand Central Park</div>
+<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor.</p>
+</div>
+</div>
+<div class="col-lg-4 order-lg-3 order-1">
+<div class="event_image">
+<img src="images/xevent_3.jpg.pagespeed.ic.Kv5iIP3O2x.jpg" alt="https://unsplash.com/@juanmramosjr" data-pagespeed-url-hash="2642259667" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+
+<div class="newsletter">
+<div class="row">
+<div class="col">
+<div class="section_title text-center">
+<h1>Subscribe to newsletter</h1>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col text-center">
+<div class="newsletter_form_container mx-auto">
+<form action="post">
+<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+<input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required data-error="Valid email is required.">
+<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer_content">
+<div class="row">
+
+<div class="col-lg-3 footer_col">
+
+<div class="logo_container">
+<div class="logo">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAArCAYAAADVJLDcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA8BJREFUeNrUmWlIFVEYhs9cl6KMQqQUCpMWKtACIyGioB+ZgZXSgu0uYRARZLRJWCb1L4KCyLwWSWVShGC2148MNKIwoWyBJEMlLDMqt7v0HvqMYXLOzNyZccYPnrvMduedc873vedcKSmlkGnEdnBe66DG+hLmdHg09seC02AyGwGhJWYbGAVyR7oYCWTTZy4mzO1iwgX7FoGZ9HkKSAM1wqudlfT+7jywHiwEqaDXjAifn7HvPZKwZfIU3/NNPrhEUAzegpfgAFgMCu1umfFgjWJbGrVQq4Hrz6IWWAfmqByzH1SBJrvGTBYYo9jGx0yOjmvOoKf9CrwBRwRCeESAMnq3RUyuYLsoEfCn/A6UULfSGwvAMTvEJIH5KsfzbuYDQQUnaP8EE/eyD6yyWkyeQ5mVp8IKgy0qFDMabHSwVIwDtSDeCjEZINrh2set0wMQZ1ZMDnNHTAdPwNRQxSSApS5yJ9NI0NxQxGTrMJ5OdLmnVHR1i/HITKXbYiyoBKcoQWmKWT6Mc5Zf4A7VlQKqU3rS9m7wTFAD/3kzOwd+P6gHj8BD0AAGZPujDZjNRDq/FBwCXUoxE0G6hTcPQ85e0M1z6sBvwfGHybtlGBjnO8gIc0EXBx8O37EZRFokhK8VxJDX4hb/noYQRt1sE16aAngxQAwoBR9w/h7eKOFdne+L/IGBoBkFkZFRKfz9U5fUoePmh4o+SWLtwWBIViY2IowtiYoMNnt8vt6jwYBfMkNfb3eDrMu0AC9/2gaq+HEIWWZ0ggnOUGHlBrXWQ+au38IxE08JhV+3DbymH81UsUpbKLMZCV5Mk8Eu0C5PAF9obp9pUzabTewEAZoyP6bM5mM61uRk0UnpvGKolD6Ymr02ilFmomRir8FzufncSq0tLJp3wWeXOoAgLYSkioTIxfgpX7steGZcC4qoi+o2muV6ThjG6KbWuBGKa/5IA9MN8Y2mI3VmJmdel3StFWSJTM00b9JTcSr8NHdpsGINgK/5XnZQDC+et6xcanKqq10DJ80WMWU0gucqx7dSoZUUHKT9xVR8K2kSpjd48jG7MK865y9X2e6lfq0WPTTusmiexBfNr9N2UVHMp1Rsi5grQ1h5v0CkWlaqoqLHhW0A1ez//2IugftWeSW1gqUsVreZsb8z5PETXAWrwSRyyjVkcgusNH5qUab4fs6i3/xBrjedFlG+WiVGiotfKVoRaWZ//wrkLZIgGi9tLdWOV1uPxsC8IEsIfuby0FrB5E66zyU2x7SYDpqato4EMX8EGAB+jh+v50OCdQAAAABJRU5ErkJggg==" alt="" data-pagespeed-url-hash="2715174268" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<span>course</span>
+</div>
+</div>
+<p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+</div>
+
+<div class="col-lg-3 footer_col">
+<div class="footer_column_title">Menu</div>
+<div class="footer_column_content">
+<ul>
+<li class="footer_list_item"><a href="#">Home</a></li>
+<li class="footer_list_item"><a href="#">About Us</a></li>
+<li class="footer_list_item"><a href="courses.html">Courses</a></li>
+<li class="footer_list_item"><a href="news.html">News</a></li>
+<li class="footer_list_item"><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<div class="col-lg-3 footer_col">
+<div class="footer_column_title">Usefull Links</div>
+<div class="footer_column_content">
+<ul>
+<li class="footer_list_item"><a href="#">Testimonials</a></li>
+<li class="footer_list_item"><a href="#">FAQ</a></li>
+<li class="footer_list_item"><a href="#">Community</a></li>
+<li class="footer_list_item"><a href="#">Campus Pictures</a></li>
+<li class="footer_list_item"><a href="#">Tuitions</a></li>
+</ul>
+</div>
+</div>
+
+<div class="col-lg-3 footer_col">
+<div class="footer_column_title">Contact</div>
+<div class="footer_column_content">
+<ul>
+<li class="footer_contact_item">
+<div class="footer_contact_icon">
+<img src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g" data-pagespeed-url-hash="1590686919" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+Blvd Libertad, 34 m05200 Arévalo
+</li>
+<li class="footer_contact_item">
+<div class="footer_contact_icon">
+<img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g" data-pagespeed-url-hash="3197076285" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+0034 37483 2445 322
+</li>
+<li class="footer_contact_item">
+<div class="footer_contact_icon">
+<img src="images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g" data-pagespeed-url-hash="3426455932" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c44494040436c4f43415c4d4255024f4341">[email&#160;protected]</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
+<div class="footer_copyright">
+<span>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+</span>
+</div>
+<div class="footer_social ml-sm-auto">
+<ul class="menu_social">
+<li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+<li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock,_TimelineMax.min.js+scrollmagic,_ScrollMagic.min.js+greensock,_animation.gsap.min.js+greensock,_ScrollToPlugin.min.js.pagespeed.jc.vMvqJRjDcY.js"></script><script>eval(mod_pagespeed_u70COlTuDG);</script>
+<script>eval(mod_pagespeed_IJDy2so_7u);</script>
+<script>eval(mod_pagespeed_8hqSEJ4tMm);</script>
+<script>eval(mod_pagespeed_kZsHz0rpyz);</script>
+<script src="plugins/OwlCarousel2-2.2.1,_owl.carousel.js+scrollTo,_jquery.scrollTo.min.js.pagespeed.jc.va4LYC1T7g.js"></script><script>eval(mod_pagespeed_TgoBAdQEBl);</script>
+<script>eval(mod_pagespeed_vaCnbcVP_z);</script>
+<script src="plugins,_easing,_easing.js+js,_custom.js.pagespeed.jc.ItwTVGvlDo.js"></script><script>eval(mod_pagespeed_aMsiTUnDbC);</script>
+<script>eval(mod_pagespeed_5$Ss5BGaZP);</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+</html>

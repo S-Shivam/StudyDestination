@@ -1,0 +1,83 @@
+{% extends 'study/base.html' %}
+{% block title %} Shortlisted Universities WorldWide {% endblock %}
+{% block university_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid ">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="{% url 'study:all_university' %}">View All</a></li>
+                <li role="presentation" class="active"><a href="{% url 'study:shortlists' %}">Shortlists</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>World Ranking</th>
+                                <th>University Name</th>
+                                <th>State</th>
+                                <th>Country</th>
+                                <th>Introduction Video</th>
+                                <th>Shortlisted</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for u in university %}
+                            {% if u.favorite %}
+                                <tr>
+                                    <td>{{ u.rank }}</td>
+                                    <td><a href="{% url 'study:univ_details' u.id %}">{{ u.university_name }}</a></td>
+                                    <td>{{ u.state }}</td>
+                                    <td>
+                                        <a href="{% url 'study:detail' u.country.id %}">
+                                            <img src="{{ u.country.country_pic.url }}" class="img-responsive" style="width: 20px; float: left; margin-right: 10px;" />
+                                        </a>
+                                        <a href="{% url 'study:detail' u.country.id %}">{{ u.country.name }}</a>
+                                    </td>
+                                    <td>
+                                        <a target="_blank" href="{% url 'study:univ_details' u.id %}">
+                                            <button type="button" class="btn btn-primary btn-xs">
+                                                <span class="glyphicon glyphicon-play"></span>&nbsp; Play
+                                            </button>
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        {% if u.favorite %}
+                                            <img src="https://i.imgur.com/FHabz3Q.png" width="15" height="15">
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <form action="{% url 'study:delete_univ' u.id %}" method="post" style="display: inline;">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="university_id" value="{{ u.id }}" />
+                                            <button type="submit" class="btn btn-danger btn-xs">
+                                                <span class="glyphicon glyphicon-remove"></span>&nbsp; Delete
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

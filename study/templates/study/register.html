@@ -1,0 +1,38 @@
+{% extends 'study/base_user.html' %}
+{% block title %} Register {% endblock %}
+{% block register_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Register Yourself</h3>
+                    {% if error_message %}
+                    <div class="alert alert-danger">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><p><strong>{{ error_message }}</strong></p>
+                    </div>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'study/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    Already registered? <a href="{% url 'study:user_login' %}">Click here</a> to Login.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

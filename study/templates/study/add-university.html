@@ -1,0 +1,54 @@
+{% extends 'study/base.html' %}
+{% block title %} Add a New University {% endblock %}
+{% block add-university_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Leftside Country details -->
+        <div class="col-sm-4 col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body" style="border:solid 1px #007A5C;">
+                        <a href="{% url 'study:detail' country.id %}">
+                            {% if country.country_pic %}
+                                <img src="{{ country.country_pic.url }}" class="img-responsive">
+                            {% else %}
+                                <h3>No image to display</h3>
+                            {% endif %}
+                        </a>
+                        <h2>{{ country.name }} <small>{{ country.language }}</small></h2>
+                        <h3><b><small>{{ country.currency }}</small></b></h3>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Rightside Add Form details -->
+        <div class="col-sm-7 col-md-8">
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation"><a href="{% url 'study:detail' country.id %}">View All</a></li>
+                <li role="presentation" class="active"><a href="{% url 'study:add_university' country.id %}">Add/Edit a University</a></li>
+            </ul>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Add/Edit a University</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'study/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'study/base.html' %}
+{% block country_active %}active{% endblock %}
+
+{% block body %}
+<style>
+    .thumbnail {margin-left:15px;margin-right:15px;}
+    .thumbnail:hover{border:1px solid #007A5C}
+    .thumbnail img{transform:scale(0.98)}
+    .thumbnail:hover img{transform:scale(1.01)}
+</style>
+<div class="container-fluid">
+<h1 style="padding-left:13px;">!!!Welcome to Study Destination!!!</h1>
+{% if countries %}
+    {% for country in countries %}
+    <div class="col-sm-2 col-md-4">
+        <div class="thumbnail">
+            <p class="caption" align="center" style="font-size:24px;vertical-align:top;margin-top:-10px">{{ country.name }}</p>
+            <a href="{% url 'study:detail' country.id %}">
+                <img src="{{ country.country_pic.url }}" class="img-responsive" style="margin-top:-15px;width:100%;height:250px">
+            </a>
+            <div class="caption">
+                <h4>{{ country.currency }} {{ country.language }}</h4>
+
+                <!-- View Details -->
+                <a href="{% url 'study:detail' country.id %}" class="btn btn-success btn-md" role="button">View Details</a>
+
+                <!-- Delete Country -->
+                <form action="{% url 'study:delete_country' country.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="country_id" value="{{ country.id }}" />
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+
+                <!-- Edit Country -->
+                <form action="{% url 'study:edit_country' country.id %}" method="get" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="country_id" value="{{ country.id }}" />
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="col-sm-12 well">
+        <br>
+        {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+    </div>
+{% endif %}
+<!-- If user searches and there are universities -->
+    {% if univs %}
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Universities</h3>
+            </div>
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>World Ranking</th>
+                                    <th>University Name</th>
+                                    <th>Language</th>
+                                    <th>Intro Video</th>
+                                    <th>Country</th>
+                                    <th>Shortlisted</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for u in univs %}
+                                    <tr>
+                                        <td>{{ u.rank }}</td>
+                                        <td><a href="{% url 'study:univ_details' u.id %}">{{ u.university_name }}</a></td>
+                                        <td>{{ u.country.language }}</td>
+                                        <td>
+                                            <a target="_blank" href="{% url 'study:univ_details' u.id %}">
+                                                <button type="button" class="btn btn-success btn-xs">
+                                                    <span class="glyphicon glyphicon-play"></span>&nbsp; Play
+                                                </button>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'study:detail' u.country.id %}">
+                                                <img src="{{ u.country.country_pic.url }}" class="img-responsive" style="width: 20px; float: left; margin-right: 10px;" />
+                                            </a>
+                                            <a href="{% url 'study:detail' u.country.id %}">{{ u.country.name }}</a>
+                                        </td>
+                                        <td>
+                                            {% if u.favorite %}
+                                                <img src="https://i.imgur.com/FHabz3Q.png" width="15" height="15">
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% else %}
+    <div class="col-sm-12 well">
+        <br>
+        {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+    </div>
+{% endif %}
+</div>
+{% endblock %}

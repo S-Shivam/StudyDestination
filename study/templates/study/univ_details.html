@@ -1,0 +1,60 @@
+{% extends 'study/base.html' %}
+{% block title %} {{ univs.university_name }} Details {% endblock %}
+{% block university_active %}active{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Leftside University details -->
+        <div class="row">
+            <div class="col-sm-7 col-md-8">
+                <ul class="nav nav-pills" style="margin-left: 20px;margin-bottom: 10px;">
+                    <li role="presentation" class="active"><a href="{% url 'study:univ_details' univs.id %}">Info</a></li>
+                    <li role="presentation"><a href="{% url 'study:edit_university' univs.id %}">Edit
+                        <span class="glyphicon glyphicon-pencil"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-7 col-md-8">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    {% if univs %}
+                        <h3>Name: <small>{{ univs.university_name }}</small></h3>
+                        <h3>Rank: <small>{{ univs.rank }}</small></h3>
+                        <h3>State: <small>{{ univs.state }}</small></h3>
+                        <h3>Country: <small>{{ univs.country.name }}</small></h3>
+                        {% if univs.intro_video %}
+                            <div class="iframe-container">
+                                <iframe src="https://www.youtube.com/embed/{{ univs.intro_video }}" frameborder="0"></iframe>
+                            </div>
+                        {% else %}
+                            <h3>No video info to display</h3>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Rightside University Video -->
+        <div class="col-sm-4 col-md-">
+                <!--<div class="panel panel-default">-->
+                    <!--<div class="panel-body">-->
+                        <!--{% if univs.intro_video %}-->
+                            <!--<div class="iframe-container">-->
+                                <!--<iframe src="https://www.youtube.com/embed/{{ univs.intro_video }}" frameborder="0"></iframe>-->
+                            <!--</div>-->
+                        <!--{% else %}-->
+                            <!--<h3>No video to display</h3>-->
+                        <!--{% endif %}-->
+                    <!--</div>-->
+                <!--</div>-->
+        </div>
+    </div>
+</div>
+{% endblock %}
